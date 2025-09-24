@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>note app</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+
+
+    <div class="header"> 
+    <h1>
+        <img src="images/note.png" alt="Note Icon" >
+        Notes App
+    </h1>
+    </div>
+
+    <form id="noteForm">
+        <label for="noteTitle" class="visually-hidden">Note Title</label>
+        <input type="text" id="noteTitle" placeholder="Note Title" required>
+        <textarea id="noteInput" placeholder="Write your note here..." required></textarea>
+        <button type="submit">Add Note</button>
+    </form>
+
+    <ul id="noteList">
+    </ul>
+
+
+    </div>
+    
+    <footer>
+  Made by <a href="https://github.com/navaneethtp" target="_blank">Navaneeth</a>
+</footer>
+
+
+    <script src="index.js"></script>
+    
+</body>
+</html> 
