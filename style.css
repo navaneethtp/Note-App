@@ -1,159 +1,161 @@
 body {
-    background-color: rgb(226, 226, 226);
-    display: flex;
-    justify-content: center;
-    font-family: Arial, Helvetica, sans-serif;
-    min-height: 100vh;
-    margin: 0;
-    min-height: 100vh;
+  background-color: rgb(226, 226, 226);
+  justify-content: center;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  min-height: 100vh;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   #noteList {
     grid-template-columns: 1fr;
+    margin: 10px 0;
   }
 }
 
 .container {
-    margin-top: 40px;
-    padding: 20px;
-    background-color: white;
-    display: inline-block;
-    border-radius: 12px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    max-width: 600px;
-    width: 100%;
+  margin-top: 30px;
+  margin: 30px auto;
+  margin-bottom: 20px;
+  padding: 20px;
+  background-color: white;
+  display: block;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  max-width: 600px;
+  width: 90%;
 }
 .header {
-    text-align: start;
-    margin-bottom: 20px;
+  text-align: start;
+  margin-bottom: 20px;
 }
 h1 {
-    display: flex;
-    align-items: center;
-    gap: 18px;
-    font-size: 2rem;
-    color: black;
-    cursor:pointer;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  font-size: 2rem;
+  color: black;
+  cursor: pointer;
 }
 
 form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+  display: flex;
+  flex-flow: column;
+  gap: 10px;
 }
 
 button {
-    cursor: pointer;
-    background-color: rgb(21, 36, 253);
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    border-radius: 5px;
-    border: none;
-    padding: 7px 15px;
-    width: 100px;
-    align-self: flex-end;
-    margin-left: 0;
+  cursor: pointer;
+  background-color: rgb(21, 36, 253);
+  color: white;
+  border-radius: 5px;
+  border: none;
+  padding: 7px 15px;
+  width: 100px;
+  align-self: flex-end;
+  margin-left: 0;
 }
 button:hover {
-    transition: background-color 0.3s ease;
-    transform: scale(1.05);
-
+  transition: background-color 0.2s ease;
+  transform: scale(1.05);
 }
 
 #noteForm {
-    border: none;
+  border: none;
 }
-    
 
 #noteInput {
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    font-size: 1rem;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
 }
 
 #noteTitle {
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    font-size: .75rem;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 0.75rem;
 }
 
 textarea {
-    resize: none;
+  resize: none;
 }
 
 #noteList {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
-    max-width: 600px;
-    margin: 20px;
-    max-height: 400px;
-    overflow-y: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  max-width: 600px;
+  margin: 20px;
+  max-height: 400px;
+  overflow-y: auto;
 }
 
 ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
 
 .note {
-    border-radius: 15px;
-    max-height: 180px;
-    min-height: 60px;
-    padding: 20px;
-    overflow-y: auto;
-    position: relative;
-    background-clip: padding-box;
-    background: #fff;
-    display: flex;
-    flex-direction: column;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  position: relative;
+  border-radius: 15px;
+  padding: 20px;
+  overflow-y: auto;
+  max-height: 180px;
+  min-height: 60px;
+  display: flex;
+  flex-direction: column;
+  word-wrap: break-word;
 }
 
 .note:hover {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transform: translateY(-2px);
-    transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+  transition: all 0.2s ease;
 }
 
 .delete-btn {
-    position: absolute;
-    background-color: transparent;
-     border: none;
-    margin-bottom: 0px;
-    cursor: pointer;
-    top: 0px;
-    right: 10px;
-    z-index: 1;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: white;
+  border: none;
+  cursor: pointer;
+  width: 28px;
+  height: 28px;
+  border-radius: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+  padding: 0;
 }
+
 .delete-btn:hover {
-    transform: scale(1.1);
-}
-
-.container li{
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-    padding: 0;
-    display: block;
-
+  transform: scale(1.1);
 }
 
 .delete-icon {
-    cursor: pointer;
+  width: 14px;
+  height: 14px;
+  pointer-events: none;
 }
 
+.container li {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
 .visually-hidden {
-    position: absolute;
-    left: -10000px;
-    top: auto;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: auto;
 }
 
 footer {
@@ -162,14 +164,14 @@ footer {
   margin-top: auto;
   font-size: 14px;
   color: #555;
-  background-color: #ffffff;
-  position: fixed;
-  width: 100%;  
-  bottom: 0;   
+  background: transparent;
+  position: static;
+  width: 100%;
+  bottom: 0;
 }
 footer a {
   text-decoration: none;
-  color: #007bff;
+  color: #000000;
 }
 footer a:hover {
   text-decoration: underline;
